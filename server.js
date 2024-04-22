@@ -35,18 +35,18 @@ app.use(
     })
   );
 
-  const result = async () => {
-    await mysql.createConnection().catch((e) => {
-      console.error(e.message);
-      process.exit(1);
-    });
-  };
-  mysql.createConnection((error, data) => {
-    if (error) {
-      console.error(error.message);
-      process.exit(1);
-    } 
-  });
+  // const result = async () => {
+  //   await mysql.createConnection().catch((e) => {
+  //     console.error(e.message);
+  //     process.exit(1);
+  //   });
+  // };
+  // mysql.createConnection((error, data) => {
+  //   if (error) {
+  //     console.error(error.message);
+  //     process.exit(1);
+  //   } 
+  // });
 
 
 app.use(parentRoutes);
@@ -66,5 +66,5 @@ app.use((err, req, res, next) => {
 
 // Start the server
 app.listen(PORT, function () {
-    console.log("CONVERGE AI is running at http://localhost:" + PORT);
+    console.log("Mobupps is running at http://localhost:" + PORT);
 });
