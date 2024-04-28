@@ -1,1 +1,6 @@
 /coverage
+node_modules/
+.netlify
+/logs
+
+
