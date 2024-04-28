@@ -3,8 +3,8 @@ const bodyParser = require("body-parser");
 const session = require("express-session");
 const serverless = require("serverless-http");
 
-const mysql = require("./server/lib/mysqlEngine");
-const parentRoutes = require("./server/routes/parentRoutes");
+const mysql = require("../server/lib/mysqlEngine");
+const parentRoutes = require("../server/routes/parentRoutes");
 
 const app = express();
 const router = express.Router();
@@ -58,7 +58,7 @@ router.get("/", (req, res) => {
   res.send("Mobupps is running..");
 });
 
-router.use("/parent", require("./server/routes/parentRoutes")); // Assuming parentRoutes is your router for /parent route
+router.use("/parent", require("../server/routes/parentRoutes")); // Assuming parentRoutes is your router for /parent route
 
 // app.use(parentRoutes);
 
