@@ -75,7 +75,7 @@ app.use((err, req, res, next) => {
 
 app.use("/.netlify/functions/server", router);
 
-module.exports.handler = serverless(app);
+module.exports.handler = serverless(server);
 
 // Start the server
 // app.listen(PORT, function () {
